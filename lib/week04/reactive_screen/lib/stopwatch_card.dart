@@ -26,6 +26,7 @@ class _StopwatchCardState extends State<StopwatchCard> {
       (_) => setState(() => _seconds++),
     );
   }
+  
 
   void _stop() {
     _timer?.cancel();
