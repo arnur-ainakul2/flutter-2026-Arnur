@@ -1,0 +1,148 @@
+import '../models/event_category.dart';
+import '../models/item.dart';
+import '../models/profile.dart';
+
+DateTime _eventDate(DateTime today, int dayOffset, int hour) {
+  return DateTime(today.year, today.month, today.day + dayOffset, hour);
+}
+
+List<Item> createSeedItems() {
+  final today = DateTime.now();
+
+  return [
+    Item(
+      title: 'University Interdisciplinary Software Engineering Hackathon!',
+      category: EventCategory.tech,
+      when: _eventDate(today, 2, 10),
+      limit: 40,
+      location: 'Engineering Building',
+      attendees: const ['Alex', 'Dana', 'Tim'],
+      isOnline: false,
+      description: 'Build a prototype with other students.',
+      favourite: true,
+    ),
+    Item(
+      title: 'Flutter Workshop',
+      category: EventCategory.tech,
+      when: _eventDate(today, 1, 11),
+      limit: 3,
+      location: 'Room 204',
+      attendees: const ['Alex', 'Dana', 'Tim'],
+      isOnline: false,
+      description: 'Hands-on Flutter development.',
+      favourite: false,
+    ),
+    Item(
+      title: 'Introduction to Machine Learning',
+      category: EventCategory.science,
+      when: _eventDate(today, -2, 14),
+      limit: 50,
+      location: 'https://meet.example.com/ml',
+      attendees: const ['Sam', 'Mira'],
+      isOnline: true,
+      description: 'Explore basic ML concepts.',
+      favourite: true,
+    ),
+    Item(
+      title: 'University Football Tournament',
+      category: EventCategory.sport,
+      when: _eventDate(today, 4, 9),
+      limit: 24,
+      location: 'University Stadium',
+      attendees: const ['Alex', 'Tim', 'Sam'],
+      isOnline: false,
+      description: 'Teams compete for the campus cup.',
+      favourite: false,
+    ),
+    Item(
+      title: 'Student Art Exhibition',
+      category: EventCategory.art,
+      when: _eventDate(today, 3, 15),
+      limit: 60,
+      location: 'Arts Center',
+      attendees: const [],
+      isOnline: false,
+      description: null,
+      favourite: false,
+    ),
+    Item(
+      title: 'International Student Meetup',
+      category: EventCategory.social,
+      when: _eventDate(today, 5, 16),
+      limit: 30,
+      location: 'Student Center',
+      attendees: const ['Mira', 'Dana'],
+      isOnline: false,
+      description: 'Meet students from different backgrounds.',
+      favourite: true,
+    ),
+    Item(
+      title: 'Cybersecurity Awareness Lecture',
+      category: EventCategory.tech,
+      when: _eventDate(today, 6, 12),
+      limit: 80,
+      location: 'https://meet.example.com/security',
+      attendees: const ['Sam'],
+      isOnline: true,
+      description: 'Learn about common security threats.',
+      favourite: false,
+    ),
+    Item(
+      title: 'Research Poster Day',
+      category: EventCategory.science,
+      when: _eventDate(today, 7, 10),
+      limit: 45,
+      location: 'Library Hall',
+      attendees: const ['Tim', 'Mira'],
+      isOnline: false,
+      description: 'Present and discuss student research.',
+      favourite: false,
+    ),
+    Item(
+      title: 'Campus Photography Walk',
+      category: EventCategory.art,
+      when: _eventDate(today, 8, 13),
+      limit: 15,
+      location: 'Main Campus',
+      attendees: const ['Alex'],
+      isOnline: false,
+      description: 'Discover campus through photography.',
+      favourite: true,
+    ),
+    Item(
+      title: 'Student Wellness Session',
+      category: EventCategory.sport,
+      when: _eventDate(today, 9, 8),
+      limit: 20,
+      location: 'Sports Hall',
+      attendees: const [],
+      isOnline: false,
+      description: 'A light movement and wellness session.',
+      favourite: false,
+    ),
+    Item(
+      title: 'Career Networking Evening',
+      category: EventCategory.social,
+      when: _eventDate(today, 10, 17),
+      limit: 70,
+      location: 'https://meet.example.com/career',
+      attendees: const ['Dana', 'Sam', 'Mira'],
+      isOnline: true,
+      description: 'Connect with peers and professionals.',
+      favourite: false,
+    ),
+    Item(
+      title: 'Open Science Discussion',
+      category: EventCategory.science,
+      when: _eventDate(today, 11, 14),
+      limit: 35,
+      location: 'Science Building',
+      attendees: const ['Tim'],
+      isOnline: false,
+      description: 'Discuss new ideas in science.',
+      favourite: false,
+    ),
+  ];
+}
+
+Profile createSeedProfile() => Profile.empty();
