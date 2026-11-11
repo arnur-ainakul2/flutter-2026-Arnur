@@ -1,0 +1,9 @@
+import 'package:flutter/material.dart';
+
+class EmptyView extends StatelessWidget {
+  const EmptyView({super.key});
+
+  @override
+  Widget build(BuildContext context) =>
+      const Center(child: Text('No students yet'));
+}
